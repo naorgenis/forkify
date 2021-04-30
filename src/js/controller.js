@@ -23,12 +23,10 @@ const controlRecipes = async function () {
 
     if (!id) return;
 
-    console.log(id);
     recipeView.renderSpinner();
 
     //loading recipe
     await model.loadRecipe(id);
-    console.log(model.state.recipe);
 
     //render bookmarks
     bookmarkedView.update(model.state.bookmarks);
@@ -94,7 +92,6 @@ const controlAddNewBookmark = function () {
 
   //render bookmarks
   bookmarkedView.render(model.state.bookmarks);
-  console.log(model.state.bookmarks);
 };
 
 const controlBookmark = function () {
@@ -107,7 +104,6 @@ const controlAddNewRecipe = async function (newRecipe) {
     addRecipeView.renderSpinner();
 
     await model.uploadRecipe(newRecipe);
-    console.log(model.state.recipe);
 
     //render recipe
     recipeView.render(model.state.recipe);
