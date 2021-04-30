@@ -140,7 +140,6 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addhandlerUpload(controlAddNewRecipe);
-  console.log('hello');
 };
 
 init();
