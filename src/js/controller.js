@@ -63,8 +63,6 @@ const controlSearchResults = async function () {
   }
 };
 
-const controlAddRecipe = function () {};
-
 const controlPagination = function (goToPage) {
   //render new results
   resultView.render(model.getSearcheResultsPage(goToPage));
